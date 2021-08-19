@@ -37,6 +37,10 @@ body {
   position: relative;
   top: 250px;
   left: 1150px;
+  border-radius: 50%;
+  border: 2px solid black;
+
+
 }
 
 .image-container img {
@@ -49,6 +53,9 @@ body {
   position: absolute;
   top: 5px;
   left: 1000px;
+  border-radius: 50%;
+  border: 2px solid black;
+
 }
 
 .image-container2 img {
@@ -95,4 +102,53 @@ body {
   position: absolute;
   top: 90px;
   left: 1100px;
+}
+
+.far.first-target {
+  position: absolute;
+  color: black;
+  font-size: 3rem;
+  left: 300px;
+  top: 230px;
+}
+
+.far.second-target{
+  position: absolute;
+  color: black;
+  font-size: 3rem;
+  left: 1205px;
+  top: 612px;
+}
+
+.far.third-target{
+  position: absolute;
+  color: black;
+  font-size: 3rem;
+  left: 970px;
+  top: 665px;
+}
+
+.next-level-btn a {
+  text-decoration: none;
+  color:rgb(255, 215, 0);
+}
+
+.next-level-btn {
+  display: none;
+  position: absolute;
+  left: 700px;
+  top: 250px; 
+  font-size: 1.1rem;
+  padding: 8px 36px;
+  background-color: black;
+  border: none;
+  color: rgb(255, 215, 0);
+  font-weight: bold;
+  border-radius: 24px;
+  letter-spacing: 3px;
+  border: 2px solid black;
+}
+
+.start-btn:hover {
+  cursor: pointer;
 }

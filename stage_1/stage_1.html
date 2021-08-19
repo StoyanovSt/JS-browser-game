@@ -12,6 +12,9 @@
 
 <body>
     <section class="content">
+        <i class="far fa-dot-circle first-target"></i>
+        <i class="far fa-dot-circle second-target"></i>
+        <i class="far fa-dot-circle third-target"></i>
         <article class="image-container">
             <img src="../images/bee5.jpg" alt="Maya the bee">
         </article>
@@ -22,13 +25,14 @@
         <h3 class="target-info">Pollen in grams: <span class="pollen-grams">0</span>/3</h3>
         <!-- dropdown menu -->
         <h3 class="hint">Hint <i class="fas fa-arrow-down"></i></h3>
-        <p class="hint-content movement">Use keyboard arrows to move the bee!</p>
-        <p class="hint-content pollen">To collect pollen land on a flower!</p>
+        <p class="hint-content movement">Use keyboard arrows to move the bee.</p>
+        <p class="hint-content pollen">To collect pollen land on a flower.</p>
+        <button class="next-level-btn"><a href="./stage_2/stage_2.html">Stage 2</a></button>
     </section>
 
     <script>
         // HINT
-        const hint = document.querySelector('i');
+        const hint = document.querySelector('.fas');
         const hintContent = document.querySelectorAll('.hint-content');
 
         hint.addEventListener('click', (e) => {
@@ -41,12 +45,13 @@
                     hint.setAttribute('class', 'fas fa-arrow-up');
                 }
             })
-        })
+        });
 
         // BEE
         const bee = document.querySelector('.image-container');
         let incrementorX = 0;
         let incrementorY = 0;
+        let gramsPollen = 0;
 
         document.addEventListener('keydown', (e) => {
             let keyName = e.key;
@@ -54,18 +59,44 @@
             if (keyName === 'ArrowRight') {
                 incrementorX += 10;
                 bee.style.marginLeft = `${incrementorX}px`;
+
             } else if (keyName === 'ArrowLeft') {
                 incrementorX -= 10;
                 bee.style.marginLeft = `${incrementorX}px`;
+
             } else if (keyName === 'ArrowDown') {
                 incrementorY += 10;
                 bee.style.marginTop = `${incrementorY}px`;
+
             } else if (keyName === 'ArrowUp') {
                 incrementorY -= 10;
                 bee.style.marginTop = `${incrementorY}px`;
             }
 
-        })
+            // WHEN LANDING ON TARGET
+            if (gramsPollen < 3) {
+                if (bee.style.marginTop === '-60px' && bee.style.marginLeft === '-810px') {
+                    alert('You have successfully gain a pollen! Go ahead! Collect them all!');
+                    document.querySelector('.pollen-grams').textContent = ++gramsPollen;
+                }
+
+                if (bee.style.marginTop === '240px' && bee.style.marginLeft === '20px') {
+                    alert('You have successfully gain a pollen! Go ahead! Collect them all!');
+                    document.querySelector('.pollen-grams').textContent = ++gramsPollen;
+                }
+
+                if (bee.style.marginTop === '300px' && bee.style.marginLeft === '-190px') {
+                    alert('You have successfully gain a pollen! Go ahead! Collect them all!');
+                    document.querySelector('.pollen-grams').textContent = ++gramsPollen;
+                }
+            } else {
+                alert('Congratulations! You may enter next level!');
+                document.querySelector('.next-level-btn').style.display="block";
+            }
+        });
+
+
+
     </script>
 </body>
 
