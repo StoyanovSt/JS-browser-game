@@ -52,13 +52,17 @@
             let keyName = e.key;
 
             if (keyName === 'ArrowRight') {
-                bee.style.marginLeft = `${++incrementorX}px`;
+                incrementorX += 10;
+                bee.style.marginLeft = `${incrementorX}px`;
             } else if (keyName === 'ArrowLeft') {
-                bee.style.marginLeft = `${--incrementorX}px`;
+                incrementorX -= 10;
+                bee.style.marginLeft = `${incrementorX}px`;
             } else if (keyName === 'ArrowDown') {
-                bee.style.marginTop = `${++incrementorY}px`;
+                incrementorY += 10;
+                bee.style.marginTop = `${incrementorY}px`;
             } else if (keyName === 'ArrowUp') {
-                bee.style.marginTop = `${--incrementorY}px`;
+                incrementorY -= 10;
+                bee.style.marginTop = `${incrementorY}px`;
             }
 
         })
