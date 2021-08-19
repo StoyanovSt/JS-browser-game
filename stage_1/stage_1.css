@@ -1,5 +1,31 @@
 @import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
 
+html {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
 body {
   background: url("../images/sunflowers.jpg");
   background-repeat: no-repeat;
@@ -20,8 +46,8 @@ body {
 
 .image-container2 {
   width: 80px;
-  position: relative;
-  top: -140px;
+  position: absolute;
+  top: 5px;
   left: 1000px;
 }
 
@@ -32,9 +58,19 @@ body {
 
 .target-info,
 .hint {
-  position: relative;
-  top: -212px;
-  left: 1099px;
+  font-size: 1.1rem;
+  width: fit-content;
+  position: absolute;
+}
+
+.target-info {
+  top: 0px;
+  left: 1100px;
+}
+
+.hint {
+  top: 30px;
+  left: 1100px;
 }
 
 .hint i:hover {
@@ -42,11 +78,21 @@ body {
 }
 
 .hint-content {
+  width: fit-content;
   display: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border-left: 2px solid black;
   padding-left: 10px;
-  position: relative;
-  top: -212px;
-  left: 1099px;
+}
+
+.hint-content.movement {
+  position: absolute;
+  top: 60px;
+  left: 1100px;
+}
+
+.hint-content.pollen {
+  position: absolute;
+  top: 90px;
+  left: 1100px;
 }

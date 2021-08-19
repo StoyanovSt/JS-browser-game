@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stage 1</title>
     <link rel="stylesheet" href="./stage_1.css">
+    <link rel="icon" href="../favicon.png">
 </head>
 
 <body>
@@ -21,10 +22,12 @@
         <h3 class="target-info">Pollen in grams: <span class="pollen-grams">0</span>/3</h3>
         <!-- dropdown menu -->
         <h3 class="hint">Hint <i class="fas fa-arrow-down"></i></h3>
-        <p class="hint-content">Use keyboard arrows to move the bee!</p>
-        <p class="hint-content">To collect pollen land on a flower!</p>
+        <p class="hint-content movement">Use keyboard arrows to move the bee!</p>
+        <p class="hint-content pollen">To collect pollen land on a flower!</p>
     </section>
+
     <script>
+        // HINT
         const hint = document.querySelector('i');
         const hintContent = document.querySelectorAll('.hint-content');
 
@@ -40,6 +43,25 @@
             })
         })
 
+        // BEE
+        const bee = document.querySelector('.image-container');
+        let incrementorX = 0;
+        let incrementorY = 0;
+
+        document.addEventListener('keydown', (e) => {
+            let keyName = e.key;
+
+            if (keyName === 'ArrowRight') {
+                bee.style.marginLeft = `${++incrementorX}px`;
+            } else if (keyName === 'ArrowLeft') {
+                bee.style.marginLeft = `${--incrementorX}px`;
+            } else if (keyName === 'ArrowDown') {
+                bee.style.marginTop = `${++incrementorY}px`;
+            } else if (keyName === 'ArrowUp') {
+                bee.style.marginTop = `${--incrementorY}px`;
+            }
+
+        })
     </script>
 </body>
 
