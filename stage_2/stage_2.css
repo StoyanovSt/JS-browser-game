@@ -1,0 +1,165 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+
+html {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  background: url("../images/Chamomile-Flower.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image-container {
+  width: 120px;
+  position: relative;
+  top: 250px;
+  left: 1150px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.image-container2 {
+  width: 80px;
+  position: absolute;
+  top: 5px;
+  left: 1000px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.image-container2 img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.target-info,
+.hint {
+  font-size: 1.1rem;
+  width: fit-content;
+  position: absolute;
+}
+
+.target-info {
+  top: 0px;
+  left: 1100px;
+}
+
+.hint {
+  top: 30px;
+  left: 1100px;
+}
+
+.hint i:hover {
+  cursor: pointer;
+}
+
+.hint-content {
+  width: fit-content;
+  display: none;
+  font-size: 1rem;
+  border-left: 2px solid black;
+  padding-left: 10px;
+}
+
+.hint-content.movement {
+  position: absolute;
+  top: 60px;
+  left: 1100px;
+}
+
+.hint-content.pollen {
+  position: absolute;
+  top: 90px;
+  left: 1100px;
+}
+
+.far.first-target {
+  position: absolute;
+  color: black;
+  font-size: 3rem;
+  left: 247px;
+  top: 124px;
+}
+
+.far.second-target {
+  position: absolute;
+  color: black;
+  font-size: 3rem;
+  left: 524px;
+  top: 242px;
+}
+
+.far.third-target {
+  position: absolute;
+  color: black;
+  font-size: 3rem;
+  left: 402px;
+  top: 334px;
+}
+.far.fourth-target {
+  position: absolute;
+  color: black;
+  font-size: 3rem;
+  left: 753px;
+  top: 485px;
+}
+.far.fifth-target {
+  position: absolute;
+  color: black;
+  font-size: 3rem;
+  left: 692px;
+  top: 591px;
+}
+
+.next-level-btn a {
+  text-decoration: none;
+  color: rgb(255, 215, 0);
+}
+
+.next-level-btn {
+  display: none;
+  position: absolute;
+  left: 700px;
+  top: 250px;
+  font-size: 1.1rem;
+  padding: 8px 36px;
+  background-color: black;
+  border: none;
+  color: rgb(255, 215, 0);
+  font-weight: bold;
+  border-radius: 24px;
+  letter-spacing: 3px;
+  border: 2px solid black;
+}
+
+.start-btn:hover {
+  cursor: pointer;
+}
