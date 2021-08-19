@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage 1</title>
+    <link rel="stylesheet" href="./stage_1.css">
+</head>
+
+<body>
+    <section class="content">
+        <article class="image-container">
+            <img src="../images/bee5.jpg" alt="Maya the bee">
+        </article>
+        <article class="image-container2">
+            <img src="../images/jar.jpg" alt="Honey jar">
+        </article>
+        <!-- Script for grams -->
+        <h3 class="target-info">Pollen in grams: <span class="pollen-grams">0</span>/3</h3>
+        <!-- dropdown menu -->
+        <h3 class="hint">Hint <i class="fas fa-arrow-down"></i></h3>
+        <p class="hint-content">Use keyboard arrows to move the bee!</p>
+        <p class="hint-content">To collect pollen land on a flower!</p>
+    </section>
+    <script>
+        const hint = document.querySelector('i');
+        const hintContent = document.querySelectorAll('.hint-content');
+
+        hint.addEventListener('click', (e) => {
+            Array.from(hintContent).forEach(el => {
+                if (el.style.display === "block") {
+                    el.style.display = "none";
+                    hint.setAttribute('class', 'fas fa-arrow-down');
+                } else {
+                    el.style.display = "block";
+                    hint.setAttribute('class', 'fas fa-arrow-up');
+                }
+            })
+        })
+
+    </script>
+</body>
+
+</html>

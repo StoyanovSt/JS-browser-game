@@ -1,3 +1,52 @@
-/* background: url("./images/sunflowers.jpg");
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+
+body {
+  background: url("../images/sunflowers.jpg");
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: cover;
+}
+
+.image-container {
+  width: 120px;
+  position: relative;
+  top: 250px;
+  left: 1150px;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.image-container2 {
+  width: 80px;
+  position: relative;
+  top: -140px;
+  left: 1000px;
+}
+
+.image-container2 img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.target-info,
+.hint {
+  position: relative;
+  top: -212px;
+  left: 1099px;
+}
+
+.hint i:hover {
+  cursor: pointer;
+}
+
+.hint-content {
+  display: none;
+  font-size: 1.2rem;
+  border-left: 2px solid black;
+  padding-left: 10px;
+  position: relative;
+  top: -212px;
+  left: 1099px;
+}

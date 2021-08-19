@@ -51,6 +51,11 @@ body {
   border-radius: 50%;
 }
 
+.start-btn a {
+  text-decoration: none;
+  color:rgb(255, 215, 0);
+}
+
 .start-btn {
   font-size: 1.1rem;
   padding: 8px 36px;
