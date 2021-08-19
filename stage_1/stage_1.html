@@ -12,6 +12,9 @@
 
 <body>
     <section class="content">
+        <article class="image-container3">
+            <img src="../images/european-bee-eater.jpg" alt="Bee eater">
+        </article>
         <i class="far fa-dot-circle first-target"></i>
         <i class="far fa-dot-circle second-target"></i>
         <i class="far fa-dot-circle third-target"></i>
@@ -21,6 +24,7 @@
         <article class="image-container2">
             <img src="../images/jar.jpg" alt="Honey jar">
         </article>
+
         <!-- Script for grams -->
         <h3 class="target-info">Pollen in grams: <span class="pollen-grams">0</span>/3</h3>
         <!-- dropdown menu -->
@@ -49,28 +53,37 @@
 
         // BEE
         const bee = document.querySelector('.image-container');
-        let incrementorX = 0;
-        let incrementorY = 0;
+        const beeEater = document.querySelector('.image-container3');
+
+        let beeEaterIncrementor = 0;
+        let beeIncrementorX = 0;
+        let beeIncrementorY = 0;
         let gramsPollen = 0;
 
         document.addEventListener('keydown', (e) => {
             let keyName = e.key;
 
             if (keyName === 'ArrowRight') {
-                incrementorX += 10;
-                bee.style.marginLeft = `${incrementorX}px`;
-
+                beeIncrementorX += 10;
+                bee.style.marginLeft = `${beeIncrementorX}px`;
+                beeEaterIncrementor += 5;
+                beeEater.style.marginLeft = `${beeEaterIncrementor}px`;
             } else if (keyName === 'ArrowLeft') {
-                incrementorX -= 10;
-                bee.style.marginLeft = `${incrementorX}px`;
-
+                beeIncrementorX -= 10;
+                bee.style.marginLeft = `${beeIncrementorX}px`;
+                beeEaterIncrementor -= 5;
+                beeEater.style.marginLeft = `${beeEaterIncrementor}px`;
             } else if (keyName === 'ArrowDown') {
-                incrementorY += 10;
-                bee.style.marginTop = `${incrementorY}px`;
+                beeIncrementorY += 10;
+                bee.style.marginTop = `${beeIncrementorY}px`;
+                beeEaterIncrementor += 5;
+                beeEater.style.marginTop = `${beeEaterIncrementor}px`;
 
             } else if (keyName === 'ArrowUp') {
-                incrementorY -= 10;
-                bee.style.marginTop = `${incrementorY}px`;
+                beeIncrementorY -= 10;
+                bee.style.marginTop = `${beeIncrementorY}px`;
+                beeEaterIncrementor -= 5;
+                beeEater.style.marginTop = `${beeEaterIncrementor}px`;
             }
 
             // WHEN LANDING ON TARGET
@@ -91,8 +104,9 @@
                 }
             } else {
                 alert('Congratulations! You may enter next level!');
-                document.querySelector('.next-level-btn').style.display="block";
+                document.querySelector('.next-level-btn').style.display = "block";
             }
+
         });
 
 

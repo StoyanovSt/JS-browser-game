@@ -152,3 +152,16 @@ body {
 .start-btn:hover {
   cursor: pointer;
 }
+
+.image-container3 {
+  width: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 145px;
+  left: 600px;
+}
+
+.image-container3 img {
+  width: 100%;
+  border-radius: 50%;
+}
