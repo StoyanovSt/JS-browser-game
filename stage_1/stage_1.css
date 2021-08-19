@@ -39,8 +39,6 @@ body {
   left: 1150px;
   border-radius: 50%;
   border: 2px solid black;
-
-
 }
 
 .image-container img {
@@ -55,7 +53,6 @@ body {
   left: 1000px;
   border-radius: 50%;
   border: 2px solid black;
-
 }
 
 .image-container2 img {
@@ -112,7 +109,7 @@ body {
   top: 230px;
 }
 
-.far.second-target{
+.far.second-target {
   position: absolute;
   color: black;
   font-size: 3rem;
@@ -120,7 +117,7 @@ body {
   top: 612px;
 }
 
-.far.third-target{
+.far.third-target {
   position: absolute;
   color: black;
   font-size: 3rem;
@@ -130,14 +127,14 @@ body {
 
 .next-level-btn a {
   text-decoration: none;
-  color:rgb(255, 215, 0);
+  color: rgb(255, 215, 0);
 }
 
 .next-level-btn {
   display: none;
   position: absolute;
   left: 700px;
-  top: 250px; 
+  top: 250px;
   font-size: 1.1rem;
   padding: 8px 36px;
   background-color: black;
@@ -157,8 +154,19 @@ body {
   width: 200px;
   border-radius: 50%;
   position: absolute;
-  top: 145px;
-  left: 600px;
+  top: 270px;
+  left: 50px;
+}
+
+.bee-eater-voice {
+  display: block;
+  width: fit-content;
+  font-size: 1.3rem;
+  color: red;
+  font-weight: bold;  
+  position: relative;
+  top: 100px;
+  left: 180px;
 }
 
 .image-container3 img {

@@ -13,6 +13,7 @@
 <body>
     <section class="content">
         <article class="image-container3">
+            <p class="bee-eater-voice">Beware of me!</p>
             <img src="../images/european-bee-eater.jpg" alt="Bee eater">
         </article>
         <i class="far fa-dot-circle first-target"></i>
@@ -106,11 +107,16 @@
                 alert('Congratulations! You may enter next level!');
                 document.querySelector('.next-level-btn').style.display = "block";
             }
-
         });
+        
+        setInterval(() => {
+            if (document.querySelector('.bee-eater-voice').textContent === 'I will catch you!') {
+                document.querySelector('.bee-eater-voice').textContent = 'Beware of me!';
+            } else {
+                document.querySelector('.bee-eater-voice').textContent = 'I will catch you!';
+            }
 
-
-
+        }, 7000);
     </script>
 </body>
 
