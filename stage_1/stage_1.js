@@ -34,14 +34,13 @@ document.addEventListener('keydown', (e) => {
     } else if (keyName === 'ArrowLeft') {
         beeIncrementorX -= 10;
         bee.style.marginLeft = `${beeIncrementorX}px`;
-        beeEaterIncrementor -= 5;
+        beeEaterIncrementor += 5;
         beeEater.style.marginLeft = `${beeEaterIncrementor}px`;
     } else if (keyName === 'ArrowDown') {
         beeIncrementorY += 10;
         bee.style.marginTop = `${beeIncrementorY}px`;
         beeEaterIncrementor += 5;
         beeEater.style.marginTop = `${beeEaterIncrementor}px`;
-
     } else if (keyName === 'ArrowUp') {
         beeIncrementorY -= 10;
         bee.style.marginTop = `${beeIncrementorY}px`;
